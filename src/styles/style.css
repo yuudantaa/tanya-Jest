@@ -1,0 +1,279 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+   
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  a{
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+  }
+   
+   
+  /*
+    AppBar
+  */
+   
+  .app-bar {
+    padding: 8px 16px;
+    background-color: gray;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+   
+  .app-bar .app-bar__menu {
+    display: flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
+  }
+   
+  .app-bar .app-bar__menu button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
+  }
+   
+  .app-bar .app-bar__brand {
+    display: flex;
+    align-items: center;
+  }
+   
+  .app-bar .app-bar__brand h1 {
+    color: white;
+    text-shadow: #fff;
+    text-transform: uppercase;
+    font-size: 22px;
+    user-select: none;
+  }
+   
+  .app-bar .app-bar__navigation {
+    position: absolute;
+    top: 50px;
+    left: -180px;
+    width: 150px;
+    transition: all 0.3s;
+    padding: 8px;
+    background-color: gray;
+    overflow: hidden;
+  }
+   
+  .app-bar .app-bar__navigation.open {
+    left: 0;
+  }
+   
+  .app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  /* skip link Button */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  background: gray;
+  color: white;
+  padding: 8px;
+  transition: top 0.3s;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  width: 100%; /* Make it full width */
+  height: 100vh; /* Make it full viewport height */
+  background-image: url('../public/hero-image_4.jpg');
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+}
+
+.hero_inner {
+  width: 100%; /* Make it full width */
+  max-width: 1200px; /* Set a maximum width for better readability */
+  height: auto;
+  color: #fff;
+  padding: 2em;
+}
+   
+  .judul{
+    font-size: 30px;
+    text-transform:uppercase;
+    text-align: center;
+  }
+
+  .desc-home{
+    font-size:25px;
+    text-transform: capitalize;
+    text-align: center;
+  }
+  /*
+    Main Content
+  */
+   
+  main {
+    
+    flex: 1;
+  }
+   
+  .content {
+    padding: 32px;
+    margin: 0 auto;
+    min-height: 100%;
+  }
+   
+  .content .content__heading {
+    font-weight: normal;
+  }
+   
+  /*
+  Movies
+*/
+ 
+.kuliner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+ 
+/* tim items */
+.makan {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 60px;
+  margin-top: 32px;
+}
+
+.makan-item {
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.makan-item_gambar {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.makan-item_isi {
+  padding: 16px;
+}
+
+.makan-item_nama {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 8px 0;
+}
+
+.makan-item_asal {
+  font-size: 18px;
+  color: #757575;
+}
+
+.makan-item_rating {
+  font-size: 18px;
+  margin-top: 8px;
+  color: #616161;
+}
+ 
+ 
+/*
+  Movie
+*/
+ 
+.makan {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+ 
+.makan__poster {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+ 
+.makan__info h4 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 8px 0;
+}
+   
+/*
+  Like
+*/
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+  /*
+    Footer
+  */
+   
+  footer {
+    padding: 16px;
+    background-color: gray;
+  }
+
+   
+  footer p {
+    margin-top: 16px;
+    text-align: center;
+    color: white;
+  }
+   
+  footer p a {
+    color: white;
+    text-decoration: none;
+  }
+
+ 
