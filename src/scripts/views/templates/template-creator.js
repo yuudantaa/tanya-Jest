@@ -31,7 +31,7 @@ const createRestoItemTemplate = (restaurant) =>
         <article class="makan-item">
           <img class="makan-item_gambar" src="https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}" alt="${restaurant.name}"/>
           <div class="makan-item_isi">
-            <h1 class="makan-item_nama"><a href="/#/detail/${restaurant.id}">${restaurant.name}</a></h1>
+                <h3 class="makan-item_name"><a href="/#/detail/${restaurant.id}">${restaurant.name || '-'}</a></h3><p>${restaurant.rating || '-'}</p>
             <p class="makan-item_kota">${restaurant.city}</p>
             <p class="makan-item_rating">${restaurant.rating}</p>
           </div>

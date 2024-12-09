@@ -13,7 +13,7 @@ const config = {
   setupFiles: ['fake-indexeddb/auto'],
 
   // The test environment that will be used for testing
-  testEnvironment: 'jsdom',
+  testEnvironment: './JSDOMEnv.js',
 
   // A map from regular expressions to paths to transformers
   transform: {
